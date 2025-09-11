@@ -1,0 +1,35 @@
+.menu-categorias ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.menu-categorias a{
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.carrossel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.carrossel-btn {
+    background: #eee;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.carrossel img {
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+    margin: 0 15px;
+    border-radius: 8px;
+}
