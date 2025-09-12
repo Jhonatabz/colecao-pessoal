@@ -1,6 +1,6 @@
 const imagens = [
     'https://avatars.githubusercontent.com/u/114354596?v=4',
-    'https://uploads.metroimg.com/wp-content/uploads/2024/05/09105858/Gollum-O-Senhor-dos-Aneis.jpg',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Gollum_by_saulone.jpg/250px-Gollum_by_saulone.jpg',
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7gJ0DSArMuX4ntuK6ldWZcAaotqVeTcaZ5Q&s',
     'https://b.fssta.com/uploads/application/soccer/headshots/713.vresize.350.350.medium.1.png',
     'https://samory.sistemasresponsivos.com.br/wp-content/uploads/2024/01/png-transparent-javascript-logo-comment-html-markup-language-analitycs-angle-text-rectangle.png'
