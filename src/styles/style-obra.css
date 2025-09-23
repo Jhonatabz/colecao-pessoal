@@ -2,6 +2,16 @@ body {
     text-align: center;
 }
 
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header span {
+    font-size: 2rem; 
+    cursor: pointer;
+}
+
 #obra-titulo {
     margin-top: 30px;
     font-size: 1.5rem;
