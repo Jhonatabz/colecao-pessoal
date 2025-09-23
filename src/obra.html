@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obra</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1 id="obra-titulo">Título da Obra</h1>
+    </header>
+    <main>
+        <section id="sobre">
+            <p id="obra-descricao">Descrição da obra será carregada aqui.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Meu Site</p>
+    </footer>
+    <script>
+        const obras = {
+            'obra1': {
+                titulo: 'Obra 1',
+                descricao: 'Descrição sobre a Obra 1.'
+            },
+            'obra2': {
+                titulo: 'Obra 2',
+                descricao: 'Descrição sobre a Obra 2.'
+            },
+            'obra3': {
+                titulo: 'Obra 3',
+                descricao: 'Descrição sobre a Obra 3.'
+            },
+            'obra4': {
+                titulo: 'Obra 4',
+                descricao: 'Descrição sobre a Obra 4.'
+            },
+            'obra5': {
+                titulo: 'Obra 5',
+                descricao: 'Descrição sobre a Obra 5.'
+            }
+        };
+
+        function carregarConteudo() {
+            const hash = window.location.hash.substring(1); // Remove o # da URL
+            const obra = obras[hash];
+
+            if (obra) {
+                document.getElementById('obra-titulo').textContent = obra.titulo;
+                document.getElementById('obra-descricao').textContent = obra.descricao;
+            } else {
+                document.getElementById('obra-titulo').textContent = 'Obra não encontrada';
+                document.getElementById('obra-descricao').textContent = 'A obra especificada não existe.';
+            }
+        }
+
+        window.addEventListener('hashchange', carregarConteudo);
+        window.addEventListener('load', carregarConteudo);
+    </script>
+</body>
+</html>
