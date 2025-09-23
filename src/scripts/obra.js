@@ -16,48 +16,23 @@ const obras = [
     new Obra('O Gabinete do Dr. Galigari', 'Filme', 'Terror', 'https://a.ltrbxd.com/resized/film-poster/5/1/8/2/2/51822-the-cabinet-of-dr-caligari-0-1000-0-1500-crop.jpg?v=385b332ed8', 'Francis e seu amigo Alan visitam o Gabinete do Dr. Caligari, uma exposição onde o misterioso médico mostra o sonâmbulo Cesare e o desperta por alguns instantes de seu sono mortal.')
 ];
 
-const imgElement1 = document.getElementById('carrossel-img1');
-const imgElement2 = document.getElementById('carrossel-img2');
-const bntAnterior = document.getElementById('anterior');
-const bntProximo = document.getElementById('proximo');
+function carregarConteudo() {
+    const hash = window.location.hash.substring(1); // Remove o # da URL
+    const indice = parseInt(hash); // Converte o hash para número
+    const obra = obras[indice];
 
-let indiceAtual1 = 0;
-let indiceAtual2 = 1;
-
-function atualizarCarrossel() {
-    imgElement1.src = obras[indiceAtual1].capa;
-    imgElement2.src = obras[indiceAtual2].capa;
-    imgElement1.parentElement.href = `obra.html#${indiceAtual1}`;
-    imgElement2.parentElement.href = `obra.html#${indiceAtual2}`;
+    if (obra && !isNaN(indice) && indice >= 0 && indice < obras.length) {
+        document.getElementById('obra-titulo').textContent = obra.titulo + ' - ' + obra.genero;
+        document.getElementById('obra-descricao').textContent = obra.sobre;
+        document.getElementById('obra-capa').src = obra.capa;
+        document.getElementById('obra-capa').alt = `${obra.titulo} - ${obra.genero}`;
+    } else {
+        document.getElementById('obra-titulo').textContent = 'Obra não encontrada';
+        document.getElementById('obra-descricao').textContent = 'A obra especificada não existe.';
+        document.getElementById('obra-capa').src = '';
+        document.getElementById('obra-capa').alt = 'Obra não encontrada';
+    }
 }
 
-bntAnterior.addEventListener('click', () => {
-    indiceAtual1 = (indiceAtual1 - 1 + obras.length) % obras.length;
-    indiceAtual2 = (indiceAtual2 - 1 + obras.length) % obras.length;
-    atualizarCarrossel();
-});
-
-bntProximo.addEventListener('click', () => {
-    indiceAtual1 = (indiceAtual1 + 1) % obras.length;
-    indiceAtual2 = (indiceAtual2 + 1) % obras.length;
-    atualizarCarrossel();
-});
-
-atualizarCarrossel();
-
-const catalogoGrid = document.querySelector('.catalogo-grid');
-catalogoGrid.innerHTML = '';
-
-obras.forEach((obra, index) => {
-    const catalogoItem = document.createElement('div');
-    catalogoItem.classList.add('catalogo-item');
-
-    catalogoItem.innerHTML = `
-        <a href="obra.html#${index}">
-            <img src="${obra.capa}" alt="${obra.titulo} - ${obra.tipo} - ${obra.genero}">
-        </a>
-        <p>${obra.sobre}</p>
-    `;
-
-    catalogoGrid.appendChild(catalogoItem);
-});
+window.addEventListener('hashchange', carregarConteudo);
+window.addEventListener('load', carregarConteudo);
