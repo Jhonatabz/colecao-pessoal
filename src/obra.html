@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +8,8 @@
 </head>
 <body>
     <header>
-        <a href="index.html" style="text-decoration: none; color: inherit;">
-            <span style="font-size: 2rem; cursor: pointer;">&#8592;</span> <!-- Icon for back navigation -->
+        <a href="index.html">
+            <span>&#8592;</span>
         </a>
         <h1 id="obra-titulo">Título da Obra</h1>
     </header>
@@ -22,40 +22,6 @@
     <footer>
         <p>&copy; 2025 Meu Site</p>
     </footer>
-    <script>
-        function Obra(tipo, genero, capa, sobre) {
-            this.tipo = tipo;
-            this.genero = genero;
-            this.capa = capa;
-            this.sobre = sobre;
-        }
-
-        const obras = {
-
-            'obra1': new Obra('Documentário', 'Drama', 'https://br.web.img3.acsta.net/c_300_300/medias/nmedia/18/93/22/16/20257398.jpg', 'Elena é um documentário brasileiro de 2012 dirigido por Petra Costa. A obra é baseada na vida de Elena Andrade - irmã mais velha de Petra.'),
-            'obra2': new Obra('Filme', 'Fantasia', 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Gollum_by_saulone.jpg/250px-Gollum_by_saulone.jpg', 'Personagem icônico da saga O Senhor dos Anéis.'),
-            'obra3': new Obra('Filme', 'Fantasia', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7gJ0DSArMuX4ntuK6ldWZcAaotqVeTcaZ5Q&s', 'Outro exemplo de obra de fantasia.'),
-            'obra4': new Obra('Filme', 'Aventura/Drama', 'https://a.ltrbxd.com/resized/film-poster/4/8/5/7/1/48571-into-the-wild-0-1000-0-1500-crop.jpg?v=94f4378014', 'Após se formar pela Universidade de Emory, Christopher McCandless surpreende a todos ao decidir doar suas economias e pertences e viajar rumo ao Alasca em vez de iniciar uma carreira lucrativa.'),
-            'obra5': new Obra('Filme', 'Terror', 'https://a.ltrbxd.com/resized/film-poster/5/1/8/2/2/51822-the-cabinet-of-dr-caligari-0-1000-0-1500-crop.jpg?v=385b332ed8', 'Francis e seu amigo Alan visitam o Gabinete do Dr. Caligari, uma exposição onde o misterioso médico mostra o sonâmbulo Cesare e o desperta por alguns instantes de seu sono mortal.')
-        };
-
-        function carregarConteudo() {
-            const hash = window.location.hash.substring(1); // Remove o # da URL
-            const obra = obras[hash];
-
-            if (obra) {
-                document.getElementById('obra-titulo').textContent = obra.tipo + ' - ' + obra.genero;
-                document.getElementById('obra-descricao').textContent = obra.sobre;
-                document.getElementById('obra-capa').src = obra.capa;
-            } else {
-                document.getElementById('obra-titulo').textContent = 'Obra não encontrada';
-                document.getElementById('obra-descricao').textContent = 'A obra especificada não existe.';
-                document.getElementById('obra-capa').src = '';
-            }
-        }
-
-        window.addEventListener('hashchange', carregarConteudo);
-        window.addEventListener('load', carregarConteudo);
-    </script>
+    <script type="module" src="./scripts/obra.js"></script>
 </body>
 </html>
