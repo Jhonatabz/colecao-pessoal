@@ -8,11 +8,11 @@ class Obra {
 }
 
 const obras = [
-    new Obra('Filme', 'Fantasia', 'https://avatars.githubusercontent.com/u/114354596?v=4', 'Filme de fantasia inspirado no livro de mesmo nome.'),
+    new Obra('Documentário', 'Drama', 'https://br.web.img3.acsta.net/c_300_300/medias/nmedia/18/93/22/16/20257398.jpg', 'Elena é um documentário brasileiro de 2012 dirigido por Petra Costa. A obra é baseada na vida de Elena Andrade - irmã mais velha de Petra.'),
     new Obra('Filme', 'Fantasia', 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Gollum_by_saulone.jpg/250px-Gollum_by_saulone.jpg', 'Personagem icônico da saga O Senhor dos Anéis.'),
     new Obra('Filme', 'Fantasia', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7gJ0DSArMuX4ntuK6ldWZcAaotqVeTcaZ5Q&s', 'Outro exemplo de obra de fantasia.'),
-    new Obra('Filme', 'Esporte', 'https://b.fssta.com/uploads/application/soccer/headshots/713.vresize.350.350.medium.1.png', 'História de um jogador de futebol famoso.'),
-    new Obra('Tecnologia', 'Programação', 'https://samory.sistemasresponsivos.com.br/wp-content/uploads/2024/01/png-transparent-javascript-logo-comment-html-markup-language-analitycs-angle-text-rectangle.png', 'Introdução ao JavaScript.')
+    new Obra('Filme', 'Aventura/Drama', 'https://a.ltrbxd.com/resized/film-poster/4/8/5/7/1/48571-into-the-wild-0-1000-0-1500-crop.jpg?v=94f4378014', 'Após se formar pela Universidade de Emory, Christopher McCandless surpreende a todos ao decidir doar suas economias e pertences e viajar rumo ao Alasca em vez de iniciar uma carreira lucrativa.'),
+    new Obra('Filme', 'Terror', 'https://a.ltrbxd.com/resized/film-poster/5/1/8/2/2/51822-the-cabinet-of-dr-caligari-0-1000-0-1500-crop.jpg?v=385b332ed8', 'Francis e seu amigo Alan visitam o Gabinete do Dr. Caligari, uma exposição onde o misterioso médico mostra o sonâmbulo Cesare e o desperta por alguns instantes de seu sono mortal.')
 ];
 
 // Dynamically generate carousel content
