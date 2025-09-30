@@ -1,5 +1,12 @@
 body {
     text-align: center;
+    margin: auto;
+}
+header {
+    background-color: #333;
+    color: #fafafa;
+    width: 100%;
+    padding: 1px;
 }
 .menu-categorias ul{
     justify-content: center;
@@ -11,7 +18,7 @@ body {
 
 .menu-categorias a{
     text-decoration: none;
-    color: #333;
+    color: #fafafa;
     font-weight: bold;
 }
 
@@ -37,14 +44,14 @@ body {
 
 .carrossel img {
     width: 300px;
-    height: 200px;
+    height: 210px;
     object-fit: cover;
     margin: 0 15px;
     border-radius: 8px;
 }
 
 .catalogo {
-    max-width: 900px;
+    max-width: 100%;
     margin: 40px auto 0 auto;
     padding: 20px;
     background: #fafafa;
@@ -59,7 +66,7 @@ body {
 }
 
 .catalogo-item {
-    width: 160px;
+    width: 200px;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
@@ -69,7 +76,7 @@ body {
 
 .catalogo-item img {
     width: 100%;
-    height: 120px;
+    height: 140px;
     object-fit: cover;
     border-radius: 6px;
     margin-bottom: 8px;
@@ -82,10 +89,15 @@ body {
 }
 
 #sobre {
-    max-width: 600px;
     margin: 40px auto 0 auto;
     padding: 20px;
     background: #f7f7f7;
     border-radius: 8px;
     text-align: center;
+}
+
+#sobre p {
+    line-height: 1.6;
+    text-align: center;
+    font-size: large;
 }
